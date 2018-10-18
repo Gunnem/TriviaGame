@@ -27,11 +27,25 @@ function timer(){
     function fifteenSecs(){
         if(expanse.timeCounter > 0) {expanse.timeCounter--;
         }
-        else if(expanse.timeCounter === 0){
+        else(expanse.timeCounter === 0){
             timeOutLoss();
             clearInterval(expanse.clock);
-
+        }
         $(".timer").html(expanse.timeCounter);
     }
-}
+};
+
+function wait(){
+    if(expanse.qCounter < 4){
+        expanse.qCounter ++;
+        generateHTML();
+        expanse.timeCounter = 15
+        timer();
+    }
+    else{
+        finalScreen();
+    }
+};
+
+
 
