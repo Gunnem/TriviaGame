@@ -1,93 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Starship vs. Starship Battle - RPG</title>
-    <link rel="stylesheet" href="./assets/css/reset.css">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Expanse Trivia Game</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-</head>
-
-<body>
-    <h1 class="text-white text-center">Starship vs. Starship Battle - RPG</h1>
-    <!-- <hr> -->
-    <div class="container">
+   
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- Jumbotron -->
+    <div class="jumbotron">
+      <!-- Container -->
+      <div class="container">
+        <!-- Row -->
         <div class="row">
-            <h2 class="text-white text-center" id="titleLetter">Choose your Ship</h2>
-        </div>
-        <br>
-        <br>
-        <div class="row">
-            <div class="card backstage col-xs-3">
-                <h5 data-health-points="1300" data-base-attack-power="80" data-attack-power="90" data-counter-attack-power="200" class="card-header">USS Enterprise 1701D</h5>
-                <img class="card-img-top img-thumbnail img-responsive characters" src="./assets/images/ncc1701d.png" alt="">
-                <div class="card-body">
-                    <p class="card-text">1300 Health Points</p>
-                    <a href="#" id="entBtn" class="btn btn-primary">Choose</a>
-                </div>
-            </div>
-            <div class="card backstage col-xs-3">
-                <h5 data-health-points="1600" data-base-attack-power="70" data-attack-power="70" data-counter-attack-power="100" class="card-header">Imperial Star Destroyer</h5>
-                <img class="card-img-top img-thumbnail img-responsive characters" src="./assets/images/stardest.png" alt="">
-                <div class="card-body">
-                    <p class="card-text">1600 Health Points</p>
-                    <a href="#" id="impBtn" class="btn btn-primary">Choose</a>
-                </div>
-            </div>
-            <div class="card backstage col-xs-3">
-                <h5 data-health-points="1500" data-base-attack-power="60" data-attack-power="80" data-counter-attack-power="150" class="card-header">Battlestar Galactica BSG-75</h5>
-                <img class="card-img-top img-thumbnail img-responsive characters" src="./assets/images/bsg75.png" alt="">
-                <div class="card-body">
-                    <p class="card-text">1500 Health Points</p>
-                    <a href="#" id="bsgBtn" class="btn btn-primary">Choose</a>
-                </div>
-            </div>
-            <div class="card backstage col-xs-3">
-                <h5 data-health-points="1800" data-base-attack-power="50" data-attack-power="100" data-counter-attack-power="250" class="card-header">Borg Cube</h5>
-                <img class="card-img-top img-thumbnail img-responsive characters" src="./assets/images/borg.png" alt="">
-                <div class="card-body">
-                    <p class="card-text">1800 Health Points</p>
-                    <a href="#" id="borgBtn" class="btn btn-primary">Choose</a>
-                </div>
-            </div>
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="row">
-            <div id="urCharacter">
-                <!-- placeholder for inseting image after  user selects it -->
-            </div>
-            <div id="fytBtnCtnr" class="col-xs-4">
-                <div class="text-white" id="textResultCtnr">
-                    <div>
-                        &nbsp;
-                    </div>
-                    <div>
-                        &nbsp;
-                    </div>
-                    <br>
-                    <div>
-                        &nbsp;
-                    </div>
-                    <div>
-                        &nbsp;
-                    </div>
-                </div>
-                <!-- placeholder for inseting image after  user selects it -->
-            </div>
-            <div id="enemyCharacter">
-                <!-- placeholder for inseting image after  user selects it -->
-            </div>
-        </div>
-    </div>
+          <h2 class="text-center">Trivia Game for</h2>
+          <div class="main-area col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2"></div>
+        </div><!-- /Row -->
+      </div> <!-- /Container -->
+    </div> <!-- /Jumbotron -->
 
-</body>
-<script src="./assets/javascript/game.js"></script>
-
+    <!-- My javascript -->
+    <script type="text/javascript" src="./assets/javascript/app.js"></script>
+  </body>
 </html>
