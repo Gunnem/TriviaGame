@@ -6,10 +6,10 @@ var expanse = {
     noAnsrCounter: 0,
     clickSound: new Audio("assets/sounds/button-click.mp3"),
     gameHtml: "",
-    qArry: ["What was the Rocinante's original name?", "Who was Miller hired to find?", "What is the primary method of propulsion in the Expanse?", " What causes drinks to pour sideways on Tycho Station?", "What is the Ring object?"],
+    qArry: ["What was the Rocinante's original name?", "Who was juliemao hired to find?", "What is the primary method of propulsion in the Expanse?", " What causes drinks to pour sideways on Tycho Station?", "What is the Ring object?"],
     answerArry: [["Galileo", "Tachi", "Seung Un", "Razorback"],["Julie Mao", "Amos Burton", "Fred Johnson", "Drummer"], ["Artificial Singularity", "Warp Drive", "Epstein Drive", "Impulse Power"], ["Gravity Plating", "Statis Field", "Coanda Effect", "Coriolis Effect"], ["An alien monument", "A weapon", "A black hole", "A wormhole"]],
     rightAnswers: ["B. Tachi", "A. Julie Mao", "C. Epstein Drive", "D. Coriolis Effect", "D. A wormhole"],
-    imgArry: ["<img class='center-block img-responsive' src='assets/images/roci.png'>", "<img class='center-block img-responsive' src='assets/images/miller.png'>", "<img class='center-block img-responsive' src='assets/images/epstein.png'>", "<img class='center-block img-responsive' src='assets/images/tycho.png'>", "<img class='center-block img-responsive' src='assets/images/ring.png'>",],
+    imgArry: ["<img class='center-block img-responsive' src='assets/images/roci.png'>", "<img class='center-block img-responsive' src='assets/images/juliemao.png'>", "<img class='center-block img-responsive' src='assets/images/epstein2.png'>", "<img class='center-block img-responsive' src='assets/images/tycho.png'>", "<img class='center-block img-responsive' src='assets/images/ring.png'>",],
     clock: "",
     qCounter: 0,
     timeCounter: 15,
@@ -70,7 +70,7 @@ function loss(){
   };
   
   function finalScreen(){
-    expanse.gameHtml = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + expanse.timeCounter + "</span></p>" + "<p class='text-center'>All done, here's how you did!" + "</p>" + "<p class='summary-correct'>Correct Answers: " + expanse.rightCounter + "</p>" + "<p>Wrong Answers: " + expanse.wrongCounter + "</p>" + "<p>Unanswered: " + expanse.noAnsrCounter + "</p>" + "<p class='text-center reset-button-container'><a class='btn btn-primary btn-lg btn-block reset-button' href='#' role='button'>Reset The Quiz!</a></p>";
+    expanse.gameHtml = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + expanse.timeCounter + "</span></p>" + "<p class='text-center'>RESULTS" + "</p>" + "<p class='summary-correct'>Correct Answers: " + expanse.rightCounter + "</p>" + "<p>Wrong Answers: " + expanse.wrongCounter + "</p>" + "<p>Unanswered: " + expanse.noAnsrCounter + "</p>" + "<p class='text-center reset-button-container'><a class='btn btn-primary btn-lg btn-block reset-button' href='#' role='button'>Reset The Quiz!</a></p>";
     $(".main-area").html(expanse.gameHtml);
   };
 
