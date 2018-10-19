@@ -56,20 +56,71 @@ function win(){
 
 function loss(){
     expanse.wrongCounter ++;
-    expanse.gameHtml = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + expanse.timeCounter + "</span></p>" + "<p class='text-center'>Wrong! The correct answer is: "+ expanse.rightAnswers[expanse.qCounter] + "</p>" + expanse.imageArray[expanse.qCounter];
+    expanse.gameHtml = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + expanse.timeCounter + "</span></p>" + "<p class='text-center'>Wrong! The correct answer is: "+ expanse.rightAnswers[expanse.qCounter] + "</p>" + expanse.imgArry[expanse.qCounter];
       $(".main-area").html(expanse.gameHtml);
       setTimeout(wait, 4000);
   };
 
   function timeOutLoss(){
-    trivia.unAnsweredCounter ++;
-    trivia.gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + trivia.timeCounter + "</span></p>" + "<p class='text-center'>You ran out of time!  The correct answer was: " + trivia.correctAnswers[trivia.questionCounter] + "</p>" + trivia.imageArray[trivia.questionCounter];
-      $(".main-area").html(trivia.gameHTML);
+    expanse.noAnsrCounter ++;
+    expanse.gameHtml = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + expanse.timeCounter + "</span></p>" + "<p class='text-center'>You ran out of time!  The correct answer was: " + expanse.rightAnswers[expanse.qCounter] + "</p>" + expanse.imgArry[expanse.qCounter];
+      $(".main-area").html(expanse.gameHtml);
       setTimeout(wait, 4000);
   };
   
   function finalScreen(){
-    trivia.gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + trivia.timeCounter + "</span></p>" + "<p class='text-center'>All done, here's how you did!" + "</p>" + "<p class='summary-correct'>Correct Answers: " + trivia.correctCounter + "</p>" + "<p>Wrong Answers: " + trivia.inCorrectCounter + "</p>" + "<p>Unanswered: " + trivia.unAnsweredCounter + "</p>" + "<p class='text-center reset-button-container'><a class='btn btn-primary btn-lg btn-block reset-button' href='#' role='button'>Reset The Quiz!</a></p>";
-    $(".main-area").html(trivia.gameHTML);
+    expanse.gameHtml = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + expanse.timeCounter + "</span></p>" + "<p class='text-center'>All done, here's how you did!" + "</p>" + "<p class='summary-correct'>Correct Answers: " + expanse.rightCounter + "</p>" + "<p>Wrong Answers: " + expanse.wrongCounter + "</p>" + "<p>Unanswered: " + expanse.noAnsrCounter + "</p>" + "<p class='text-center reset-button-container'><a class='btn btn-primary btn-lg btn-block reset-button' href='#' role='button'>Reset The Quiz!</a></p>";
+    $(".main-area").html(expanse.gameHTML);
   };
 
+  function resetGame(){
+    expanse.qCounter = 0;
+    expanse.rightCounter = 0;
+    expanse.wrongCounter = 0;
+    expanse.noAnsrCounter = 0;
+    expanse.timeCounter = 15;
+    generateHTML();
+    timer();
+  };
+  
+  function generateHTML(){
+    expanse.gameHtml = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>20</span></p><p class='text-center'>" + expanse.qArry[expanse.qCounter] + "</p><button class='first-answer answer'>A. " + expanse.answerArry[expanse.qCounter][0] + "</button><br><button class='answer'>B. "+expanse.answerArry[expanse.qCounter][1]+"</button><br><button class='answer'>C. "+expanse.answerArry[expanse.qCounter][2]+"</button><br><button class='answer'>D. "+expanse.answerArry[expanse.qCounter][3]+"</button>";
+    $(".main-area").html(expanse.gameHTML);
+  }
+
+  //MAIN PROCESS
+
+  startButton();
+
+//start-button click
+$("body").on("click", ".start-button", function(event){
+	event.preventDefault();
+	expanse.clickSound.play();
+	generateHTML();
+
+	timer();
+}); // Closes start-button click
+
+$("body").on("click", ".answer", function(event){
+	expanse.clickSound.play();
+  //If correct answer
+  selectedAnswer = $(this).text();
+	if(selectedAnswer === expanse.rightAnswers[expanse.qCounter]) {
+
+		clearInterval(expanse.clock);
+		win();
+	}
+  //If incorrect ansewr
+	else {
+
+		clearInterval(expanse.clock);
+		loss();
+	}
+}); // Close .answer click
+
+//reset-button click
+$("body").on("click", ".reset-button", function(event){
+	expanse.clickSound.play();
+	resetGame();
+}); // Closes reset-button click
+ 
