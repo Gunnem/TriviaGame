@@ -14,7 +14,7 @@ body {
 
 .main-button-container {
   margin-top: 175px;
-  max-width: 410px;
+  max-width: 610px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -55,22 +55,22 @@ body {
 
 .start-button {
   padding: .25em 7em .25em 7em;
-  background-color: #9B0B00;
+  background-color: #0b0e7a;
   border: none;
 }
 
 .start-button:hover {
-  background-color: #FF1200;
+  background-color: #1419d1;
 }
 
 .reset-button {
   padding: .25em 7em .25em 7em;
-  background-color: #9B0B00;
+  background-color: #0b0e7a;
   border: none;
 }
 
 .reset-button:hover {
-  background-color: #FF1200;
+  background-color: #1419d1;
 }
 
 .summary-correct {

@@ -9,7 +9,7 @@ var expanse = {
     qArry: ["What was the Rocinante's original name?", "Who was Miller hired to find?", "What is the primary method of propulsion in the Expanse?", " What causes drinks to pour sideways on Tycho Station?", "What is the Ring object?"],
     answerArry: [["Galileo", "Tachi", "Seung Un", "Razorback"],["Julie Mao", "Amos Burton", "Fred Johnson", "Drummer"], ["Artificial Singularity", "Warp Drive", "Epstein Drive", "Impulse Power"], ["Gravity Plating", "Statis Field", "Coanda Effect", "Coriolis Effect"], ["An alien monument", "A weapon", "A black hole", "A wormhole"]],
     rightAnswers: ["B. Tachi", "A. Julie Mao", "C. Epstein Drive", "D. Coriolis Effect", "D. A wormhole"],
-    imgArry: ["<img class='center-block img-right' src='assets/images/roci.png'>", "<img class='center-block img-right' src='assets/images/miller.png'>", "<img class='center-block img-right' src='assets/images/epstein.png'>", "<img class='center-block img-right' src='assets/images/tycho.png'>", "<img class='center-block img-right' src='assets/images/ring.png'>",],
+    imgArry: ["<img class='center-block img-responsive' src='assets/images/roci.png'>", "<img class='center-block img-responsive' src='assets/images/miller.png'>", "<img class='center-block img-responsive' src='assets/images/epstein.png'>", "<img class='center-block img-responsive' src='assets/images/tycho.png'>", "<img class='center-block img-responsive' src='assets/images/ring.png'>",],
     clock: "",
     qCounter: 0,
     timeCounter: 15,
